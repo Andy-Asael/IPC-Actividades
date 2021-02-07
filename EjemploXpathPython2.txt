@@ -1,0 +1,4 @@
+Ejemplo de Xpath en una sentencia XML
+<xpath expr="//field[@name]='is_done'" position="before">
+    <field name="date_deadline" />
+</xpath>

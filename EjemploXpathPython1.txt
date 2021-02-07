@@ -1,0 +1,18 @@
+import xml.etree.ElementTree as ET
+ 
+root = ET.fromstring(docxml)
+ 
+# Elementos de nivel superior
+root.findall(".")
+ 
+# todos los hijos de neighbor o nietos de country en el nivel superior
+root.findall("./country/neighbor")
+ 
+# Nodos xml con name='Singapore' que sean hijos de 'year'
+root.findall(".//year/..[@name='Singapore']")
+ 
+# nodos 'year' que son hijos de etiquetas xml cuyo name='Singapore'
+root.findall(".//*[@name='Singapore']/year")
+ 
+# todos los nodos 'neighbor'que son el segundo hijo de su padre
+root.findall(".//neighbor[2]") 
